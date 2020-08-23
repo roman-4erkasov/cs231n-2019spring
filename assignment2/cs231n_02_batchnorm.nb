@@ -1,0 +1,1658 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     52349,       1650]
+NotebookOptionsPosition[     48453,       1597]
+NotebookOutlinePosition[     48859,       1615]
+CellTagsIndexPosition[     48816,       1612]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+  "1.", "\:041e\:0431\:0440\:0430\:0442\:043d\:043e\:0435", " ", 
+   "\:0440\:0430\:0441\:043f\:0440\:043e\:0441\:0442\:0440\:0430\:043d\:0435\
+\:043d\:0438\:0435", " ", "\:043e\:0448\:0438\:0431\:043a\:0438", " ", 
+   "\:0438\:0437", " ", 
+   "\:043e\:0440\:0438\:0433\:0438\:043d\:0430\:043b\:044c\:043d\:043e\:0439",
+    " ", "\:0441\:0442\:0430\:0442\:044c\:0438", " ", "\:043f\:0440\:043e", 
+   " ", "Batch", " ", "normalisation", " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"https", ":"}], "//", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"arxiv", ".", "org"}], "/", "pdf"}], "/", 
+      RowBox[{"1502.03167", ".", "pdf"}]}]}], ")"}]}], ":"}]], "Input",
+ CellChangeTimes->{{3.7901643927736387`*^9, 3.790164421237718*^9}, {
+  3.7901655139773197`*^9, 3.7901655457173367`*^9}, {3.790165675996907*^9, 
+  3.790165678498478*^9}},ExpressionUUID->"25b63f4c-d9e6-43a0-bd6e-\
+30658570acec"],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox[
+   RowBox[{"\[PartialD]", "l"}], 
+   RowBox[{"\[PartialD]", 
+    SubscriptBox[
+     OverscriptBox["x", "^"], "i"]}]], "=", 
+  RowBox[{
+   FractionBox[
+    RowBox[{"\[PartialD]", "l"}], 
+    RowBox[{"\[PartialD]", 
+     SubscriptBox["y", "i"]}]], "\[CenterDot]", "\[Gamma]"}]}]], "Input",
+ CellChangeTimes->{{3.790131130777381*^9, 
+  3.790131198447815*^9}},ExpressionUUID->"e83d986a-f772-4571-931f-\
+d85f11c0b396"],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox[
+   RowBox[{"\[PartialD]", "l"}], 
+   RowBox[{"\[PartialD]", 
+    SubsuperscriptBox["\[Sigma]", "B", "2"]}]], "=", 
+  RowBox[{
+   UnderoverscriptBox["\[Sum]", 
+    RowBox[{"i", "=", "1"}], "m"], 
+   RowBox[{
+    RowBox[{
+     FractionBox[
+      RowBox[{"\[PartialD]", "l"}], 
+      RowBox[{"\[PartialD]", 
+       SubscriptBox[
+        OverscriptBox["x", "^"], "i"]}]], "\[CenterDot]", 
+     RowBox[{"(", 
+      RowBox[{
+       SubscriptBox["x", "i"], "-", 
+       SubscriptBox["\[Mu]", "B"]}], ")"}], "\[CenterDot]", 
+     RowBox[{"(", 
+      RowBox[{"-", 
+       FractionBox["1", "2"]}], ")"}]}], 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{
+       SubsuperscriptBox["\[Sigma]", "B", "2"], "+", "\[Epsilon]"}], ")"}], 
+     RowBox[{
+      RowBox[{"-", "3"}], "/", "2"}]]}]}]}]], "Input",
+ CellChangeTimes->{{3.790131246039048*^9, 
+  3.790131416136696*^9}},ExpressionUUID->"2fcae02a-511b-4912-97ac-\
+8fc26ea965a6"],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox[
+   RowBox[{"\[PartialD]", "l"}], 
+   RowBox[{"\[PartialD]", 
+    SubscriptBox["\[Mu]", "B"]}]], "=", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{
+     UnderoverscriptBox["\[Sum]", 
+      RowBox[{"i", "=", "1"}], "m"], 
+     RowBox[{
+      FractionBox[
+       RowBox[{"\[PartialD]", "l"}], 
+       RowBox[{"\[PartialD]", 
+        SubscriptBox[
+         OverscriptBox["x", "^"], "i"]}]], "\[CenterDot]", 
+      RowBox[{"(", 
+       RowBox[{"-", 
+        FractionBox["1", 
+         SqrtBox[
+          RowBox[{
+           SubsuperscriptBox["\[Sigma]", "B", "2"], "+", "\[Epsilon]"}]]]}], 
+       ")"}]}]}], ")"}], "+", 
+   RowBox[{
+    FractionBox[
+     RowBox[{"\[PartialD]", "l"}], 
+     RowBox[{"\[PartialD]", 
+      SubsuperscriptBox["\[Sigma]", "B", "2"]}]], "\[CenterDot]", 
+    FractionBox[
+     RowBox[{
+      UnderoverscriptBox["\[Sum]", 
+       RowBox[{"i", "=", "1"}], "m"], 
+      RowBox[{
+       RowBox[{"-", "2"}], 
+       RowBox[{"(", 
+        RowBox[{
+         SubscriptBox["x", "i"], "-", 
+         SubscriptBox["\[Mu]", "B"]}], ")"}]}]}], "m"]}]}]}]], "Input",
+ CellChangeTimes->{{3.790131452890836*^9, 
+  3.790131660663437*^9}},ExpressionUUID->"a7c56dbd-4de8-43be-8255-\
+d1db8003e018"],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox[
+   RowBox[{"\[PartialD]", "l"}], 
+   RowBox[{"\[PartialD]", 
+    SubscriptBox["x", "i"]}]], "=", 
+  RowBox[{
+   RowBox[{
+    FractionBox[
+     RowBox[{"\[PartialD]", "l"}], 
+     RowBox[{"\[PartialD]", 
+      SubscriptBox[
+       OverscriptBox["x", "^"], "i"]}]], "\[CenterDot]", 
+    FractionBox["1", 
+     SqrtBox[
+      RowBox[{
+       SubsuperscriptBox["\[Sigma]", "B", "2"], "+", "\[Epsilon]"}]]]}], "+", 
+   
+   RowBox[{
+    FractionBox[
+     RowBox[{"\[PartialD]", "l"}], 
+     RowBox[{"\[PartialD]", 
+      SubsuperscriptBox["\[Sigma]", "B", "2"]}]], "\[CenterDot]", 
+    FractionBox[
+     RowBox[{"2", 
+      RowBox[{"(", 
+       RowBox[{
+        SubscriptBox["x", "i"], "-", 
+        SubscriptBox["\[Mu]", "B"]}], ")"}]}], "m"]}], "+", 
+   RowBox[{
+    FractionBox[
+     RowBox[{"\[PartialD]", "l"}], 
+     RowBox[{"\[PartialD]", 
+      SubsuperscriptBox["\[Mu]", "B", "2"]}]], "\[CenterDot]", 
+    FractionBox["1", "m"]}]}]}]], "Input",
+ CellChangeTimes->{{3.7901317257158012`*^9, 3.790131761634234*^9}, {
+  3.7901318295971117`*^9, 3.790131885434911*^9}, {3.7901693053305817`*^9, 
+  3.790169308547653*^9}},ExpressionUUID->"b318a993-66ad-43a0-a0f9-\
+d07b9ddf897c"],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox[
+   RowBox[{"\[PartialD]", "l"}], 
+   RowBox[{"\[PartialD]", "\[Gamma]"}]], "=", 
+  RowBox[{
+   UnderoverscriptBox["\[Sum]", 
+    RowBox[{"i", "=", "1"}], "m"], 
+   RowBox[{
+    FractionBox[
+     RowBox[{"\[PartialD]", "l"}], 
+     RowBox[{"\[PartialD]", 
+      SubscriptBox["y", "i"]}]], "\[CenterDot]", 
+    SubscriptBox[
+     OverscriptBox["x", "^"], "i"]}]}]}]], "Input",
+ CellChangeTimes->{{3.7901319027827263`*^9, 
+  3.7901319485529327`*^9}},ExpressionUUID->"cb6639e8-d4f4-48ce-9a6f-\
+d007431e4e3f"],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox[
+   RowBox[{"\[PartialD]", "l"}], 
+   RowBox[{"\[PartialD]", "\[Beta]"}]], "=", 
+  RowBox[{
+   UnderoverscriptBox["\[Sum]", 
+    RowBox[{"i", "=", "1"}], "m"], 
+   FractionBox[
+    RowBox[{"\[PartialD]", "l"}], 
+    RowBox[{"\[PartialD]", 
+     SubscriptBox["y", "i"]}]]}]}]], "Input",
+ CellChangeTimes->{{3.7901319677524*^9, 
+  3.790132003370659*^9}},ExpressionUUID->"c937bb05-7409-4498-a21a-\
+20084e2fd446"],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.7901643853684807`*^9, 
+  3.790164385587359*^9}},ExpressionUUID->"7bc88766-56b7-4c70-8066-\
+c8c99adae1af"],
+
+Cell[BoxData[
+ RowBox[{"2.", " ", "\:0421\:043e\:0431\:0435\:0440\:0435\:043c", " ", 
+  "\:043d\:0430\:0438\:0431\:043e\:043b\:0435\:0435", " ", 
+  "\:0432\:0430\:0436\:043d\:044b\:0435", " ", 
+  "\:043e\:0431\:043e\:0437\:043d\:0430\:0447\:0435\:043d\:0438\:044f", " ", 
+  "\:0438\:0437", " ", 
+  "\:043e\:0440\:0438\:0433\:0438\:043d\:0430\:043b\:044c\:043d\:043e\:0439", 
+  " ", 
+  RowBox[{"\:0441\:0442\:0430\:0442\:044c\:0438", ":"}]}]], "Input",
+ CellChangeTimes->{{3.790164690760088*^9, 3.7901647042120667`*^9}, {
+  3.790165555815298*^9, 3.790165556882882*^9}, {3.7901658015679407`*^9, 
+  3.7901658174767513`*^9}, {3.790166179922616*^9, 
+  3.79016620227172*^9}},ExpressionUUID->"02a4bcbc-fc2c-47b4-aa3f-\
+91bffbfbed59"],
+
+Cell[BoxData[
+ RowBox[{
+  SubscriptBox[
+   OverscriptBox["x", "^"], "i"], "=", 
+  RowBox[{
+   FractionBox[
+    RowBox[{
+     SubscriptBox["x", "i"], "-", 
+     SubscriptBox["\[Mu]", "B"]}], 
+    RowBox[{
+     SubscriptBox["\[Sigma]", "B"], "+", "\[Epsilon]"}]], " ", "-", "  ", "z",
+    "-", 
+   RowBox[{"score", " ", "\:0434\:043b\:044f", " ", 
+    SubscriptBox["x", "i"]}]}]}]], "Input",
+ CellChangeTimes->{{3.790164708562108*^9, 3.790164813895529*^9}, {
+  3.790165794371483*^9, 
+  3.7901657965686207`*^9}},ExpressionUUID->"8931fb71-0aee-48b8-993b-\
+1fd60035df1c"],
+
+Cell[BoxData[
+ RowBox[{
+  SubscriptBox["y", "i"], "=", 
+  RowBox[{
+   RowBox[{"\[Gamma]", " ", 
+    SubscriptBox["x", "i"]}], "+", "\[Beta]"}]}]], "Input",
+ CellChangeTimes->{{3.790166028048732*^9, 
+  3.790166053475356*^9}},ExpressionUUID->"35f8e657-c642-4f93-9f4f-\
+09b4a3431f01"],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox[
+   RowBox[{"\[PartialD]", "l"}], 
+   RowBox[{"\[PartialD]", 
+    SubscriptBox[
+     OverscriptBox["x", "^"], "i"]}]], "=", 
+  RowBox[{
+   FractionBox[
+    RowBox[{"\[PartialD]", "l"}], 
+    RowBox[{"\[PartialD]", 
+     SubscriptBox["y", "i"]}]], "\[CenterDot]", "\[Gamma]"}]}]], "Input",Expre\
+ssionUUID->"60aba200-ef4d-4417-9db2-de537a005bce"],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{
+  3.790164706070465*^9},ExpressionUUID->"7f87b320-d479-409a-b4bc-\
+157aae95a1aa"],
+
+Cell[BoxData[
+ RowBox[{"3.", "\:0420\:0430\:0437\:0431\:0435\:0440\:0435\:043c", " ", 
+  FractionBox[
+   RowBox[{"\[PartialD]", "l"}], 
+   RowBox[{"\[PartialD]", 
+    SubscriptBox["x", "i"]}]], " ", "\:0434\:043b\:044f", " ", 
+  "\:0443\:043f\:0440\:043e\:0449\:0435\:043d\:0438\:044f", " ", 
+  "\:0432\:044b\:0447\:0441\:043b\:0435\:043d\:0438\:0439", " ", 
+  "\:043e\:0431\:0440\:0430\:0442\:043d\:043e\:0433\:043e", " ", 
+  "\:0440\:0430\:0441\:043f\:0440\:043e\:0441\:0442\:0440\:0430\:043d\:0435\
+\:043d\:0438\:044f", " ", 
+  RowBox[{"\:043e\:0448\:0438\:0431\:043a\:0438", ":"}]}]], "Input",
+ CellChangeTimes->{{3.790165495600835*^9, 3.790165509124798*^9}, {
+  3.7901655625341253`*^9, 3.790165562952683*^9}, {3.790168348172327*^9, 
+  3.790168362363826*^9}},ExpressionUUID->"0eb43d54-bf83-46bd-9d5a-\
+ab7dbc3354d9"],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox[
+   RowBox[{"\[PartialD]", "l"}], 
+   RowBox[{"\[PartialD]", 
+    SubscriptBox["x", "i"]}]], "=", 
+  RowBox[{
+   RowBox[{
+    FractionBox[
+     RowBox[{"\[PartialD]", "l"}], 
+     RowBox[{"\[PartialD]", 
+      SubscriptBox[
+       OverscriptBox["x", "^"], "i"]}]], "\[CenterDot]", 
+    FractionBox["1", 
+     SqrtBox[
+      RowBox[{
+       SubsuperscriptBox["\[Sigma]", "B", "2"], "+", "\[Epsilon]"}]]]}], "+", 
+   
+   RowBox[{
+    FractionBox[
+     RowBox[{"\[PartialD]", "l"}], 
+     RowBox[{"\[PartialD]", 
+      SubsuperscriptBox["\[Sigma]", "B", "2"]}]], "\[CenterDot]", 
+    FractionBox[
+     RowBox[{"2", 
+      RowBox[{"(", 
+       RowBox[{
+        SubscriptBox["x", "i"], "-", 
+        SubscriptBox["\[Mu]", "B"]}], ")"}]}], "m"]}], "+", 
+   RowBox[{
+    RowBox[{
+     FractionBox[
+      RowBox[{"\[PartialD]", "l"}], 
+      RowBox[{"\[PartialD]", 
+       SubsuperscriptBox["\[Mu]", "B", "2"]}]], "\[CenterDot]", 
+     FractionBox["1", "m"]}], "   ", 
+    RowBox[{"(", 
+     RowBox[{"\:0420\:0430\:0437\:0432\:0435\:0440\:043d\:0451\:043c", " ", 
+      FractionBox[
+       RowBox[{"\[PartialD]", "l"}], 
+       RowBox[{"\[PartialD]", 
+        SubsuperscriptBox["\[Sigma]", "B", "2"]}]]}], ")"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.790166946814334*^9, 3.7901669612776747`*^9}, {
+   3.790168320335352*^9, 3.790168329897914*^9}, 
+   3.790169391684637*^9},ExpressionUUID->"7a28e3d3-8b3a-4b20-9ffa-\
+1517bb93f95e"],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox[
+   RowBox[{"\[PartialD]", "l"}], 
+   RowBox[{"\[PartialD]", 
+    SubscriptBox["x", "i"]}]], "=", 
+  RowBox[{
+   RowBox[{
+    FractionBox[
+     RowBox[{"\[PartialD]", "l"}], 
+     RowBox[{"\[PartialD]", 
+      SubscriptBox[
+       OverscriptBox["x", "^"], "i"]}]], "\[CenterDot]", 
+    FractionBox["1", 
+     SqrtBox[
+      RowBox[{
+       SubsuperscriptBox["\[Sigma]", "B", "2"], "+", "\[Epsilon]"}]]]}], "+", 
+   
+   RowBox[{
+    RowBox[{"[", 
+     RowBox[{
+      UnderoverscriptBox["\[Sum]", 
+       RowBox[{"i", "=", "1"}], "m"], 
+      RowBox[{
+       RowBox[{
+        FractionBox[
+         RowBox[{"\[PartialD]", "l"}], 
+         RowBox[{"\[PartialD]", 
+          SubscriptBox[
+           OverscriptBox["x", "^"], "i"]}]], "\[CenterDot]", 
+        RowBox[{"(", 
+         RowBox[{
+          SubscriptBox["x", "i"], "-", 
+          SubscriptBox["\[Mu]", "B"]}], ")"}], "\[CenterDot]", 
+        RowBox[{"(", 
+         RowBox[{"-", 
+          FractionBox["1", "2"]}], ")"}]}], 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          SubsuperscriptBox["\[Sigma]", "B", "2"], "+", "\[Epsilon]"}], ")"}], 
+        RowBox[{
+         RowBox[{"-", "3"}], "/", "2"}]]}]}], "]"}], "\[CenterDot]", 
+    FractionBox[
+     RowBox[{"2", 
+      RowBox[{"(", 
+       RowBox[{
+        SubscriptBox["x", "i"], "-", 
+        SubscriptBox["\[Mu]", "B"]}], ")"}]}], "m"]}], "+", 
+   RowBox[{
+    FractionBox[
+     RowBox[{"\[PartialD]", "l"}], 
+     RowBox[{"\[PartialD]", 
+      SubsuperscriptBox["\[Mu]", "B", "2"]}]], "\[CenterDot]", 
+    FractionBox["1", "m"]}]}]}]], "Input",
+ CellChangeTimes->{{3.790166982190402*^9, 3.790166985158204*^9}, 
+   3.790169397014563*^9},ExpressionUUID->"e6b7b5dd-e314-4883-9e5a-\
+b75551aa0832"],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox[
+   RowBox[{"\[PartialD]", "l"}], 
+   RowBox[{"\[PartialD]", 
+    SubscriptBox["x", "i"]}]], "=", 
+  RowBox[{
+   RowBox[{
+    FractionBox[
+     RowBox[{"\[PartialD]", "l"}], 
+     RowBox[{"\[PartialD]", 
+      SubscriptBox[
+       OverscriptBox["x", "^"], "i"]}]], "\[CenterDot]", 
+    FractionBox["1", 
+     SqrtBox[
+      RowBox[{
+       SubsuperscriptBox["\[Sigma]", "B", "2"], "+", "\[Epsilon]"}]]]}], "-", 
+   
+   RowBox[{
+    RowBox[{"[", 
+     RowBox[{
+      UnderoverscriptBox["\[Sum]", 
+       RowBox[{"j", "=", "1"}], "m"], 
+      RowBox[{
+       FractionBox[
+        RowBox[{"\[PartialD]", "l"}], 
+        RowBox[{"\[PartialD]", 
+         SubscriptBox[
+          OverscriptBox["x", "^"], "j"]}]], "\[CenterDot]", 
+       RowBox[{"(", 
+        RowBox[{
+         SubscriptBox["x", "j"], "-", 
+         SubscriptBox["\[Mu]", "B"]}], ")"}], "\[CenterDot]", 
+       FractionBox["1", 
+        SuperscriptBox[
+         RowBox[{"(", 
+          SqrtBox[
+           RowBox[{
+            SubsuperscriptBox["\[Sigma]", "B", "2"], "+", "\[Epsilon]"}]], 
+          ")"}], "3"]]}]}], "]"}], "\[CenterDot]", 
+    FractionBox[
+     RowBox[{"(", 
+      RowBox[{
+       SubscriptBox["x", "i"], "-", 
+       SubscriptBox["\[Mu]", "B"]}], ")"}], "m"]}], "+", 
+   RowBox[{
+    FractionBox[
+     RowBox[{"\[PartialD]", "l"}], 
+     RowBox[{"\[PartialD]", 
+      SubsuperscriptBox["\[Mu]", "B", "2"]}]], "\[CenterDot]", 
+    FractionBox["1", "m"]}]}]}]], "Input",
+ CellChangeTimes->{{3.790167192610662*^9, 3.7901671987601843`*^9}, {
+   3.790167958510008*^9, 3.790167968505649*^9}, {3.7901680495305023`*^9, 
+   3.79016807951171*^9}, 
+   3.7901694039110126`*^9},ExpressionUUID->"7a960697-3fd4-4eb0-86eb-\
+3dc04e6169f0"],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox[
+   RowBox[{"\[PartialD]", "l"}], 
+   RowBox[{"\[PartialD]", 
+    SubscriptBox["x", "i"]}]], "=", 
+  RowBox[{
+   RowBox[{
+    FractionBox[
+     RowBox[{"\[PartialD]", "l"}], 
+     RowBox[{"\[PartialD]", 
+      SubscriptBox[
+       OverscriptBox["x", "^"], "i"]}]], "\[CenterDot]", 
+    FractionBox["1", 
+     SqrtBox[
+      RowBox[{
+       SubsuperscriptBox["\[Sigma]", "B", "2"], "+", "\[Epsilon]"}]]]}], "-", 
+   
+   RowBox[{
+    RowBox[{"[", 
+     RowBox[{
+      UnderoverscriptBox["\[Sum]", 
+       RowBox[{"j", "=", "1"}], "m"], 
+      RowBox[{
+       FractionBox[
+        RowBox[{"\[PartialD]", "l"}], 
+        RowBox[{"\[PartialD]", 
+         SubscriptBox[
+          OverscriptBox["x", "^"], "j"]}]], "\[CenterDot]", 
+       FractionBox[
+        RowBox[{"(", 
+         RowBox[{
+          SubscriptBox["x", "j"], "-", 
+          SubscriptBox["\[Mu]", "B"]}], ")"}], 
+        SqrtBox[
+         RowBox[{
+          SubsuperscriptBox["\[Sigma]", "B", "2"], "+", "\[Epsilon]"}]]], 
+       "\[CenterDot]", 
+       FractionBox["1", 
+        SuperscriptBox[
+         RowBox[{"(", 
+          SqrtBox[
+           RowBox[{
+            SubsuperscriptBox["\[Sigma]", "B", "2"], "+", "\[Epsilon]"}]], 
+          ")"}], "2"]]}]}], "]"}], "\[CenterDot]", 
+    FractionBox[
+     RowBox[{"(", 
+      RowBox[{
+       SubscriptBox["x", "i"], "-", 
+       SubscriptBox["\[Mu]", "B"]}], ")"}], "m"]}], "+", 
+   RowBox[{
+    FractionBox[
+     RowBox[{"\[PartialD]", "l"}], 
+     RowBox[{"\[PartialD]", 
+      SubsuperscriptBox["\[Mu]", "B", "2"]}]], "\[CenterDot]", 
+    FractionBox["1", "m"]}]}]}]], "Input",
+ CellChangeTimes->{{3.790168127723938*^9, 3.7901681389824133`*^9}, 
+   3.7901694083737383`*^9},ExpressionUUID->"c3c4f958-a994-469b-bfc0-\
+785adf998d6b"],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox[
+   RowBox[{"\[PartialD]", "l"}], 
+   RowBox[{"\[PartialD]", 
+    SubscriptBox["x", "i"]}]], "=", 
+  RowBox[{
+   RowBox[{
+    FractionBox[
+     RowBox[{"\[PartialD]", "l"}], 
+     RowBox[{"\[PartialD]", 
+      SubscriptBox[
+       OverscriptBox["x", "^"], "i"]}]], "\[CenterDot]", 
+    FractionBox["1", 
+     SqrtBox[
+      RowBox[{
+       SubsuperscriptBox["\[Sigma]", "B", "2"], "+", "\[Epsilon]"}]]]}], "-", 
+   
+   RowBox[{
+    RowBox[{"[", 
+     RowBox[{
+      UnderoverscriptBox["\[Sum]", 
+       RowBox[{"j", "=", "1"}], "m"], 
+      RowBox[{
+       FractionBox[
+        RowBox[{"\[PartialD]", "l"}], 
+        RowBox[{"\[PartialD]", 
+         SubscriptBox[
+          OverscriptBox["x", "^"], "j"]}]], "\[CenterDot]", 
+       SubscriptBox[
+        OverscriptBox["x", "^"], "j"], "\[CenterDot]", 
+       FractionBox["1", 
+        SuperscriptBox[
+         RowBox[{"(", 
+          SqrtBox[
+           RowBox[{
+            SubsuperscriptBox["\[Sigma]", "B", "2"], "+", "\[Epsilon]"}]], 
+          ")"}], "2"]]}]}], "]"}], "\[CenterDot]", 
+    FractionBox[
+     RowBox[{"(", 
+      RowBox[{
+       SubscriptBox["x", "i"], "-", 
+       SubscriptBox["\[Mu]", "B"]}], ")"}], "m"]}], "+", 
+   RowBox[{
+    FractionBox[
+     RowBox[{"\[PartialD]", "l"}], 
+     RowBox[{"\[PartialD]", 
+      SubsuperscriptBox["\[Mu]", "B", "2"]}]], "\[CenterDot]", 
+    FractionBox["1", "m"]}]}]}]], "Input",
+ CellChangeTimes->{{3.790168127723938*^9, 3.790168163866207*^9}, 
+   3.7901694116564703`*^9},ExpressionUUID->"0eb25d3f-c3a4-4e3a-82fc-\
+d09ee15fda2b"],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox[
+   RowBox[{"\[PartialD]", "l"}], 
+   RowBox[{"\[PartialD]", 
+    SubscriptBox["x", "i"]}]], "=", 
+  RowBox[{
+   RowBox[{
+    FractionBox[
+     RowBox[{"\[PartialD]", "l"}], 
+     RowBox[{"\[PartialD]", 
+      SubscriptBox[
+       OverscriptBox["x", "^"], "i"]}]], "\[CenterDot]", 
+    FractionBox["1", 
+     SqrtBox[
+      RowBox[{
+       SubsuperscriptBox["\[Sigma]", "B", "2"], "+", "\[Epsilon]"}]]]}], "-", 
+   
+   RowBox[{
+    RowBox[{
+     FractionBox["1", 
+      RowBox[{"m", " ", 
+       SqrtBox[
+        RowBox[{
+         SubsuperscriptBox["\[Sigma]", "B", "2"], "+", "\[Epsilon]"}]]}]], 
+     "[", 
+     RowBox[{
+      UnderoverscriptBox["\[Sum]", 
+       RowBox[{"j", "=", "1"}], "m"], 
+      RowBox[{
+       FractionBox[
+        RowBox[{"\[PartialD]", "l"}], 
+        RowBox[{"\[PartialD]", 
+         SubscriptBox[
+          OverscriptBox["x", "^"], "j"]}]], "\[CenterDot]", 
+       SubscriptBox[
+        OverscriptBox["x", "^"], "j"]}]}], "]"}], "\[CenterDot]", 
+    SubscriptBox[
+     OverscriptBox["x", "^"], "i"]}], "+", 
+   RowBox[{
+    RowBox[{
+     FractionBox[
+      RowBox[{"\[PartialD]", "l"}], 
+      RowBox[{"\[PartialD]", 
+       SubsuperscriptBox["\[Mu]", "B", "2"]}]], "\[CenterDot]", 
+     FractionBox["1", "m"]}], "     ", 
+    RowBox[{"(", 
+     RowBox[{"\:0420\:0430\:0437\:0432\:0435\:0440\:043d\:0451\:043c", " ", 
+      FractionBox[
+       RowBox[{"\[PartialD]", "l"}], 
+       RowBox[{"\[PartialD]", 
+        SubsuperscriptBox["\[Mu]", "B", "2"]}]]}], ")"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.790168182589888*^9, 3.7901682299349213`*^9}, {
+  3.790168277112589*^9, 3.790168316280175*^9}, {3.790169416670123*^9, 
+  3.790169440242209*^9}, {3.790169720484078*^9, 
+  3.790169720881866*^9}},ExpressionUUID->"247482f0-36d1-41d6-9ea5-\
+9b3c77230729"],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox[
+   RowBox[{"\[PartialD]", "l"}], 
+   RowBox[{"\[PartialD]", 
+    SubscriptBox["x", "i"]}]], "=", 
+  RowBox[{
+   RowBox[{
+    FractionBox[
+     RowBox[{"\[PartialD]", "l"}], 
+     RowBox[{"\[PartialD]", 
+      SubscriptBox[
+       OverscriptBox["x", "^"], "i"]}]], "\[CenterDot]", 
+    FractionBox["1", 
+     SqrtBox[
+      RowBox[{
+       SubsuperscriptBox["\[Sigma]", "B", "2"], "+", "\[Epsilon]"}]]]}], "-", 
+   
+   RowBox[{
+    FractionBox[
+     SubscriptBox[
+      OverscriptBox["x", "^"], "i"], 
+     RowBox[{"m", " ", 
+      SqrtBox[
+       RowBox[{
+        SubsuperscriptBox["\[Sigma]", "B", "2"], "+", "\[Epsilon]"}]]}]], 
+    "\[CenterDot]", 
+    RowBox[{"[", 
+     RowBox[{
+      UnderoverscriptBox["\[Sum]", 
+       RowBox[{"j", "=", "1"}], "m"], 
+      RowBox[{
+       FractionBox[
+        RowBox[{"\[PartialD]", "l"}], 
+        RowBox[{"\[PartialD]", 
+         SubscriptBox[
+          OverscriptBox["x", "^"], "j"]}]], "\[CenterDot]", 
+       SubscriptBox[
+        OverscriptBox["x", "^"], "j"]}]}], "]"}]}], "+", 
+   RowBox[{
+    FractionBox["1", "m"], "\[CenterDot]", 
+    RowBox[{"[", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        UnderoverscriptBox["\[Sum]", 
+         RowBox[{"j", "=", "1"}], "m"], 
+        RowBox[{
+         FractionBox[
+          RowBox[{"\[PartialD]", "l"}], 
+          RowBox[{"\[PartialD]", 
+           SubscriptBox[
+            OverscriptBox["x", "^"], "j"]}]], "\[CenterDot]", 
+         RowBox[{"(", 
+          RowBox[{"-", 
+           FractionBox["1", 
+            SqrtBox[
+             RowBox[{
+              SubsuperscriptBox["\[Sigma]", "B", "2"], "+", 
+              "\[Epsilon]"}]]]}], ")"}]}]}], ")"}], "+", 
+      RowBox[{
+       FractionBox[
+        RowBox[{"\[PartialD]", "l"}], 
+        RowBox[{"\[PartialD]", 
+         SubsuperscriptBox["\[Sigma]", "B", "2"]}]], "\[CenterDot]", 
+       FractionBox[
+        RowBox[{
+         UnderoverscriptBox["\[Sum]", 
+          RowBox[{"j", "=", "1"}], "m"], 
+         RowBox[{
+          RowBox[{"-", "2"}], 
+          RowBox[{"(", 
+           RowBox[{
+            SubscriptBox["x", "j"], "-", 
+            SubscriptBox["\[Mu]", "B"]}], ")"}]}]}], "m"]}]}], 
+     "]"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.79016839230939*^9, 3.790168437850748*^9}, {
+   3.790168548061269*^9, 3.790168551181929*^9}, 3.7901694564442167`*^9, 
+   3.79016952242168*^9, {3.790169749630629*^9, 
+   3.790169763447424*^9}},ExpressionUUID->"b13b97af-7f0f-4fcf-a185-\
+cbea64d14d93"],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox[
+   RowBox[{"\[PartialD]", "l"}], 
+   RowBox[{"\[PartialD]", 
+    SubscriptBox["x", "i"]}]], "=", 
+  RowBox[{
+   RowBox[{
+    FractionBox["1", 
+     SqrtBox[
+      RowBox[{
+       SubsuperscriptBox["\[Sigma]", "B", "2"], "+", "\[Epsilon]"}]]], 
+    FractionBox[
+     RowBox[{"\[PartialD]", "l"}], 
+     RowBox[{"\[PartialD]", 
+      SubscriptBox[
+       OverscriptBox["x", "^"], "i"]}]]}], "-", 
+   RowBox[{
+    FractionBox[
+     SubscriptBox[
+      OverscriptBox["x", "^"], "i"], 
+     RowBox[{"m", " ", 
+      SqrtBox[
+       RowBox[{
+        SubsuperscriptBox["\[Sigma]", "B", "2"], "+", "\[Epsilon]"}]]}]], "[", 
+    RowBox[{
+     UnderoverscriptBox["\[Sum]", 
+      RowBox[{"j", "=", "1"}], "m"], 
+     RowBox[{
+      FractionBox[
+       RowBox[{"\[PartialD]", "l"}], 
+       RowBox[{"\[PartialD]", 
+        SubscriptBox[
+         OverscriptBox["x", "^"], "j"]}]], 
+      SubscriptBox[
+       OverscriptBox["x", "^"], "j"]}]}], "]"}], "-", 
+   RowBox[{
+    FractionBox["1", 
+     RowBox[{"m", 
+      SqrtBox[
+       RowBox[{
+        SubsuperscriptBox["\[Sigma]", "B", "2"], "+", "\[Epsilon]"}]]}]], "[", 
+    RowBox[{
+     UnderoverscriptBox["\[Sum]", 
+      RowBox[{"j", "=", "1"}], "m"], 
+     FractionBox[
+      RowBox[{"\[PartialD]", "l"}], 
+      RowBox[{"\[PartialD]", 
+       SubscriptBox[
+        OverscriptBox["x", "^"], "j"]}]]}], "]"}], "+", 
+   RowBox[{
+    FractionBox["1", 
+     SuperscriptBox["m", "2"]], "[", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"\[PartialD]", "l"}], 
+      RowBox[{"\[PartialD]", 
+       SubsuperscriptBox["\[Sigma]", "B", "2"]}]], 
+     RowBox[{
+      UnderoverscriptBox["\[Sum]", 
+       RowBox[{"j", "=", "1"}], "m"], 
+      RowBox[{
+       RowBox[{"-", "2"}], 
+       RowBox[{"(", 
+        RowBox[{
+         SubscriptBox["x", "j"], "-", 
+         SubscriptBox["\[Mu]", "B"]}], ")"}]}]}]}], "]"}]}]}]], "Input",
+ CellChangeTimes->{
+  3.790169519916253*^9, {3.7901695892907677`*^9, 3.790169742048938*^9}, 
+   3.790169804142806*^9, {3.790169859096183*^9, 3.790169861595262*^9}, 
+   3.790169899410945*^9},ExpressionUUID->"e19b7373-bb64-4245-a431-\
+47903c55f200"],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox[
+   RowBox[{"\[PartialD]", "l"}], 
+   RowBox[{"\[PartialD]", 
+    SubscriptBox["x", "i"]}]], "=", 
+  RowBox[{
+   RowBox[{
+    FractionBox["1", 
+     SqrtBox[
+      RowBox[{
+       SubsuperscriptBox["\[Sigma]", "B", "2"], "+", "\[Epsilon]"}]]], 
+    RowBox[{"(", 
+     RowBox[{
+      FractionBox[
+       RowBox[{"\[PartialD]", "l"}], 
+       RowBox[{"\[PartialD]", 
+        SubscriptBox[
+         OverscriptBox["x", "^"], "i"]}]], "-", 
+      RowBox[{
+       FractionBox[
+        SubscriptBox[
+         OverscriptBox["x", "^"], "i"], 
+        RowBox[{"m", " "}]], "[", 
+       RowBox[{
+        UnderoverscriptBox["\[Sum]", 
+         RowBox[{"j", "=", "1"}], "m"], 
+        RowBox[{
+         FractionBox[
+          RowBox[{"\[PartialD]", "l"}], 
+          RowBox[{"\[PartialD]", 
+           SubscriptBox[
+            OverscriptBox["x", "^"], "j"]}]], 
+         SubscriptBox[
+          OverscriptBox["x", "^"], "j"]}]}], "]"}], "-", 
+      RowBox[{
+       FractionBox["1", "m"], "[", 
+       RowBox[{
+        UnderoverscriptBox["\[Sum]", 
+         RowBox[{"j", "=", "1"}], "m"], 
+        FractionBox[
+         RowBox[{"\[PartialD]", "l"}], 
+         RowBox[{"\[PartialD]", 
+          SubscriptBox[
+           OverscriptBox["x", "^"], "j"]}]]}], "]"}]}], ")"}]}], "+", 
+   RowBox[{
+    RowBox[{
+     FractionBox["1", 
+      SuperscriptBox["m", "2"]], "[", 
+     RowBox[{
+      FractionBox[
+       RowBox[{"\[PartialD]", "l"}], 
+       RowBox[{"\[PartialD]", 
+        SubsuperscriptBox["\[Sigma]", "B", "2"]}]], 
+      RowBox[{
+       UnderoverscriptBox["\[Sum]", 
+        RowBox[{"j", "=", "1"}], "m"], 
+       RowBox[{
+        RowBox[{"-", "2"}], 
+        RowBox[{"(", 
+         RowBox[{
+          SubscriptBox["x", "j"], "-", 
+          SubscriptBox["\[Mu]", "B"]}], ")"}]}]}]}], "]"}], "     ", 
+    RowBox[{"(", 
+     RowBox[{"\:0420\:0430\:0437\:0432\:0435\:0440\:043d\:0451\:043c", " ", 
+      FractionBox[
+       RowBox[{"\[PartialD]", "l"}], 
+       RowBox[{"\[PartialD]", 
+        SubsuperscriptBox["\[Sigma]", "B", "2"]}]]}], ")"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.790169878027729*^9, 
+  3.790169901551152*^9}},ExpressionUUID->"49cd4694-dab8-4cac-acc7-\
+ef58403cc9e6"],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox[
+   RowBox[{"\[PartialD]", "l"}], 
+   RowBox[{"\[PartialD]", 
+    SubscriptBox["x", "i"]}]], "=", 
+  RowBox[{
+   RowBox[{
+    FractionBox["1", 
+     SqrtBox[
+      RowBox[{
+       SubsuperscriptBox["\[Sigma]", "B", "2"], "+", "\[Epsilon]"}]]], 
+    RowBox[{"(", 
+     RowBox[{
+      FractionBox[
+       RowBox[{"\[PartialD]", "l"}], 
+       RowBox[{"\[PartialD]", 
+        SubscriptBox[
+         OverscriptBox["x", "^"], "i"]}]], "-", 
+      RowBox[{
+       FractionBox[
+        SubscriptBox[
+         OverscriptBox["x", "^"], "i"], 
+        RowBox[{"m", " "}]], "[", 
+       RowBox[{
+        UnderoverscriptBox["\[Sum]", 
+         RowBox[{"j", "=", "1"}], "m"], 
+        RowBox[{
+         FractionBox[
+          RowBox[{"\[PartialD]", "l"}], 
+          RowBox[{"\[PartialD]", 
+           SubscriptBox[
+            OverscriptBox["x", "^"], "j"]}]], 
+         SubscriptBox[
+          OverscriptBox["x", "^"], "j"]}]}], "]"}], "-", 
+      RowBox[{
+       FractionBox["1", "m"], "[", 
+       RowBox[{
+        UnderoverscriptBox["\[Sum]", 
+         RowBox[{"j", "=", "1"}], "m"], 
+        FractionBox[
+         RowBox[{"\[PartialD]", "l"}], 
+         RowBox[{"\[PartialD]", 
+          SubscriptBox[
+           OverscriptBox["x", "^"], "j"]}]]}], "]"}]}], ")"}]}], "+", 
+   RowBox[{
+    FractionBox[
+     RowBox[{"(", 
+      RowBox[{"-", "2"}], ")"}], 
+     SuperscriptBox["m", "2"]], "[", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"\[PartialD]", "l"}], 
+      RowBox[{"\[PartialD]", 
+       SubsuperscriptBox["\[Sigma]", "B", "2"]}]], 
+     RowBox[{
+      UnderoverscriptBox["\[Sum]", 
+       RowBox[{"j", "=", "1"}], "m"], 
+      RowBox[{"(", 
+       RowBox[{
+        SubscriptBox["x", "j"], "-", 
+        SubscriptBox["\[Mu]", "B"]}], ")"}]}]}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.7901699781467237`*^9, 
+  3.7901699847227488`*^9}},ExpressionUUID->"afc502df-6085-4336-b965-\
+384a52811cfb"],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox[
+   RowBox[{"\[PartialD]", "l"}], 
+   RowBox[{"\[PartialD]", 
+    SubscriptBox["x", "i"]}]], "=", 
+  RowBox[{
+   RowBox[{
+    FractionBox["1", 
+     SqrtBox[
+      RowBox[{
+       SubsuperscriptBox["\[Sigma]", "B", "2"], "+", "\[Epsilon]"}]]], 
+    RowBox[{"(", 
+     RowBox[{
+      FractionBox[
+       RowBox[{"\[PartialD]", "l"}], 
+       RowBox[{"\[PartialD]", 
+        SubscriptBox[
+         OverscriptBox["x", "^"], "i"]}]], "-", 
+      RowBox[{
+       FractionBox[
+        SubscriptBox[
+         OverscriptBox["x", "^"], "i"], 
+        RowBox[{"m", " "}]], "[", 
+       RowBox[{
+        UnderoverscriptBox["\[Sum]", 
+         RowBox[{"j", "=", "1"}], "m"], 
+        RowBox[{
+         FractionBox[
+          RowBox[{"\[PartialD]", "l"}], 
+          RowBox[{"\[PartialD]", 
+           SubscriptBox[
+            OverscriptBox["x", "^"], "j"]}]], 
+         SubscriptBox[
+          OverscriptBox["x", "^"], "j"]}]}], "]"}], "-", 
+      RowBox[{
+       FractionBox["1", "m"], "[", 
+       RowBox[{
+        UnderoverscriptBox["\[Sum]", 
+         RowBox[{"j", "=", "1"}], "m"], 
+        FractionBox[
+         RowBox[{"\[PartialD]", "l"}], 
+         RowBox[{"\[PartialD]", 
+          SubscriptBox[
+           OverscriptBox["x", "^"], "j"]}]]}], "]"}]}], ")"}]}], "+", 
+   RowBox[{
+    FractionBox[
+     RowBox[{"(", 
+      RowBox[{"-", "2"}], ")"}], "m"], "[", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"\[PartialD]", "l"}], 
+      RowBox[{"\[PartialD]", 
+       SubsuperscriptBox["\[Sigma]", "B", "2"]}]], 
+     FractionBox[
+      RowBox[{
+       UnderoverscriptBox["\[Sum]", 
+        RowBox[{"j", "=", "1"}], "m"], 
+       RowBox[{"(", 
+        RowBox[{
+         SubscriptBox["x", "j"], "-", 
+         SubscriptBox["\[Mu]", "B"]}], ")"}]}], "m"]}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.7901699969456377`*^9, 
+  3.790170006555647*^9}},ExpressionUUID->"914b09c4-8d0e-41dc-ac5b-\
+d69c3afdd041"],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox[
+   RowBox[{"\[PartialD]", "l"}], 
+   RowBox[{"\[PartialD]", 
+    SubscriptBox["x", "i"]}]], "=", 
+  RowBox[{
+   RowBox[{
+    FractionBox["1", 
+     SqrtBox[
+      RowBox[{
+       SubsuperscriptBox["\[Sigma]", "B", "2"], "+", "\[Epsilon]"}]]], 
+    RowBox[{"(", 
+     RowBox[{
+      FractionBox[
+       RowBox[{"\[PartialD]", "l"}], 
+       RowBox[{"\[PartialD]", 
+        SubscriptBox[
+         OverscriptBox["x", "^"], "i"]}]], "-", 
+      RowBox[{
+       FractionBox[
+        SubscriptBox[
+         OverscriptBox["x", "^"], "i"], 
+        RowBox[{"m", " "}]], "[", 
+       RowBox[{
+        UnderoverscriptBox["\[Sum]", 
+         RowBox[{"j", "=", "1"}], "m"], 
+        RowBox[{
+         FractionBox[
+          RowBox[{"\[PartialD]", "l"}], 
+          RowBox[{"\[PartialD]", 
+           SubscriptBox[
+            OverscriptBox["x", "^"], "j"]}]], 
+         SubscriptBox[
+          OverscriptBox["x", "^"], "j"]}]}], "]"}], "-", 
+      RowBox[{
+       FractionBox["1", "m"], "[", 
+       RowBox[{
+        UnderoverscriptBox["\[Sum]", 
+         RowBox[{"j", "=", "1"}], "m"], 
+        FractionBox[
+         RowBox[{"\[PartialD]", "l"}], 
+         RowBox[{"\[PartialD]", 
+          SubscriptBox[
+           OverscriptBox["x", "^"], "j"]}]]}], "]"}]}], ")"}]}], "+", 
+   RowBox[{
+    FractionBox[
+     RowBox[{"(", 
+      RowBox[{"-", "2"}], ")"}], "m"], "[", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"\[PartialD]", "l"}], 
+      RowBox[{"\[PartialD]", 
+       SubsuperscriptBox["\[Sigma]", "B", "2"]}]], 
+     RowBox[{"(", 
+      RowBox[{
+       FractionBox[
+        RowBox[{
+         UnderoverscriptBox["\[Sum]", 
+          RowBox[{"j", "=", "1"}], "m"], 
+         SubscriptBox["x", "j"]}], "m"], "-", 
+       FractionBox[
+        RowBox[{
+         UnderoverscriptBox["\[Sum]", 
+          RowBox[{"j", "=", "1"}], "m"], 
+         SubscriptBox["\[Mu]", "B"]}], "m"]}], ")"}]}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.790170164377356*^9, 3.790170195302178*^9}, {
+  3.790170265540221*^9, 
+  3.790170274406489*^9}},ExpressionUUID->"a8d008eb-5f76-4282-9b1f-\
+2a387b9bde97"],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox[
+   RowBox[{"\[PartialD]", "l"}], 
+   RowBox[{"\[PartialD]", 
+    SubscriptBox["x", "i"]}]], "=", 
+  RowBox[{
+   RowBox[{
+    FractionBox["1", 
+     SqrtBox[
+      RowBox[{
+       SubsuperscriptBox["\[Sigma]", "B", "2"], "+", "\[Epsilon]"}]]], 
+    RowBox[{"(", 
+     RowBox[{
+      FractionBox[
+       RowBox[{"\[PartialD]", "l"}], 
+       RowBox[{"\[PartialD]", 
+        SubscriptBox[
+         OverscriptBox["x", "^"], "i"]}]], "-", 
+      RowBox[{
+       FractionBox[
+        SubscriptBox[
+         OverscriptBox["x", "^"], "i"], 
+        RowBox[{"m", " "}]], "[", 
+       RowBox[{
+        UnderoverscriptBox["\[Sum]", 
+         RowBox[{"j", "=", "1"}], "m"], 
+        RowBox[{
+         FractionBox[
+          RowBox[{"\[PartialD]", "l"}], 
+          RowBox[{"\[PartialD]", 
+           SubscriptBox[
+            OverscriptBox["x", "^"], "j"]}]], 
+         SubscriptBox[
+          OverscriptBox["x", "^"], "j"]}]}], "]"}], "-", 
+      RowBox[{
+       FractionBox["1", "m"], "[", 
+       RowBox[{
+        UnderoverscriptBox["\[Sum]", 
+         RowBox[{"j", "=", "1"}], "m"], 
+        FractionBox[
+         RowBox[{"\[PartialD]", "l"}], 
+         RowBox[{"\[PartialD]", 
+          SubscriptBox[
+           OverscriptBox["x", "^"], "j"]}]]}], "]"}]}], ")"}]}], "+", 
+   RowBox[{
+    FractionBox[
+     RowBox[{"(", 
+      RowBox[{"-", "2"}], ")"}], "m"], "[", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"\[PartialD]", "l"}], 
+      RowBox[{"\[PartialD]", 
+       SubsuperscriptBox["\[Sigma]", "B", "2"]}]], 
+     RowBox[{"(", 
+      RowBox[{
+       FractionBox[
+        RowBox[{
+         UnderoverscriptBox["\[Sum]", 
+          RowBox[{"j", "=", "1"}], "m"], 
+         SubscriptBox["x", "j"]}], "m"], "-", 
+       RowBox[{
+        FractionBox["m", "m"], 
+        SubscriptBox["\[Mu]", "B"]}]}], ")"}]}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.7901702844426203`*^9, 
+  3.79017029814669*^9}},ExpressionUUID->"91784b3d-5558-4561-b185-\
+e89df5707f2e"],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox[
+   RowBox[{"\[PartialD]", "l"}], 
+   RowBox[{"\[PartialD]", 
+    SubscriptBox["x", "i"]}]], "=", 
+  RowBox[{
+   RowBox[{
+    FractionBox["1", 
+     SqrtBox[
+      RowBox[{
+       SubsuperscriptBox["\[Sigma]", "B", "2"], "+", "\[Epsilon]"}]]], 
+    RowBox[{"(", 
+     RowBox[{
+      FractionBox[
+       RowBox[{"\[PartialD]", "l"}], 
+       RowBox[{"\[PartialD]", 
+        SubscriptBox[
+         OverscriptBox["x", "^"], "i"]}]], "-", 
+      RowBox[{
+       FractionBox[
+        SubscriptBox[
+         OverscriptBox["x", "^"], "i"], 
+        RowBox[{"m", " "}]], "[", 
+       RowBox[{
+        UnderoverscriptBox["\[Sum]", 
+         RowBox[{"j", "=", "1"}], "m"], 
+        RowBox[{
+         FractionBox[
+          RowBox[{"\[PartialD]", "l"}], 
+          RowBox[{"\[PartialD]", 
+           SubscriptBox[
+            OverscriptBox["x", "^"], "j"]}]], 
+         SubscriptBox[
+          OverscriptBox["x", "^"], "j"]}]}], "]"}], "-", 
+      RowBox[{
+       FractionBox["1", "m"], "[", 
+       RowBox[{
+        UnderoverscriptBox["\[Sum]", 
+         RowBox[{"j", "=", "1"}], "m"], 
+        FractionBox[
+         RowBox[{"\[PartialD]", "l"}], 
+         RowBox[{"\[PartialD]", 
+          SubscriptBox[
+           OverscriptBox["x", "^"], "j"]}]]}], "]"}]}], ")"}]}], "+", 
+   RowBox[{
+    FractionBox[
+     RowBox[{"(", 
+      RowBox[{"-", "2"}], ")"}], "m"], "[", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"\[PartialD]", "l"}], 
+      RowBox[{"\[PartialD]", 
+       SubsuperscriptBox["\[Sigma]", "B", "2"]}]], 
+     RowBox[{"(", 
+      RowBox[{
+       FractionBox[
+        RowBox[{
+         UnderoverscriptBox["\[Sum]", 
+          RowBox[{"j", "=", "1"}], "m"], 
+         SubscriptBox["x", "j"]}], "m"], "-", 
+       SubscriptBox["\[Mu]", "B"]}], ")"}]}], "]"}]}]}]], "Input",
+ CellChangeTimes->{
+  3.7901703187952433`*^9},ExpressionUUID->"1296db08-8edf-4886-9f79-\
+bf2c3eef5466"],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox[
+   RowBox[{"\[PartialD]", "l"}], 
+   RowBox[{"\[PartialD]", 
+    SubscriptBox["x", "i"]}]], "=", 
+  RowBox[{
+   RowBox[{
+    FractionBox["1", 
+     SqrtBox[
+      RowBox[{
+       SubsuperscriptBox["\[Sigma]", "B", "2"], "+", "\[Epsilon]"}]]], 
+    RowBox[{"(", 
+     RowBox[{
+      FractionBox[
+       RowBox[{"\[PartialD]", "l"}], 
+       RowBox[{"\[PartialD]", 
+        SubscriptBox[
+         OverscriptBox["x", "^"], "i"]}]], "-", 
+      RowBox[{
+       FractionBox[
+        SubscriptBox[
+         OverscriptBox["x", "^"], "i"], 
+        RowBox[{"m", " "}]], "[", 
+       RowBox[{
+        UnderoverscriptBox["\[Sum]", 
+         RowBox[{"j", "=", "1"}], "m"], 
+        RowBox[{
+         FractionBox[
+          RowBox[{"\[PartialD]", "l"}], 
+          RowBox[{"\[PartialD]", 
+           SubscriptBox[
+            OverscriptBox["x", "^"], "j"]}]], 
+         SubscriptBox[
+          OverscriptBox["x", "^"], "j"]}]}], "]"}], "-", 
+      RowBox[{
+       FractionBox["1", "m"], "[", 
+       RowBox[{
+        UnderoverscriptBox["\[Sum]", 
+         RowBox[{"j", "=", "1"}], "m"], 
+        FractionBox[
+         RowBox[{"\[PartialD]", "l"}], 
+         RowBox[{"\[PartialD]", 
+          SubscriptBox[
+           OverscriptBox["x", "^"], "j"]}]]}], "]"}]}], ")"}]}], "+", 
+   RowBox[{
+    FractionBox[
+     RowBox[{"(", 
+      RowBox[{"-", "2"}], ")"}], "m"], "[", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"\[PartialD]", "l"}], 
+      RowBox[{"\[PartialD]", 
+       SubsuperscriptBox["\[Sigma]", "B", "2"]}]], 
+     RowBox[{"(", 
+      RowBox[{
+       SubscriptBox["\[Mu]", "B"], "-", 
+       SubscriptBox["\[Mu]", "B"]}], ")"}]}], "]"}]}]}]], "Input",
+ CellChangeTimes->{
+  3.79017033409289*^9},ExpressionUUID->"24030b65-a274-4db5-a480-72ea8091161d"],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox[
+   RowBox[{"\[PartialD]", "l"}], 
+   RowBox[{"\[PartialD]", 
+    SubscriptBox["x", "i"]}]], "=", 
+  RowBox[{
+   RowBox[{
+    FractionBox["1", 
+     SqrtBox[
+      RowBox[{
+       SubsuperscriptBox["\[Sigma]", "B", "2"], "+", "\[Epsilon]"}]]], 
+    RowBox[{"(", 
+     RowBox[{
+      FractionBox[
+       RowBox[{"\[PartialD]", "l"}], 
+       RowBox[{"\[PartialD]", 
+        SubscriptBox[
+         OverscriptBox["x", "^"], "i"]}]], "-", 
+      RowBox[{
+       FractionBox[
+        SubscriptBox[
+         OverscriptBox["x", "^"], "i"], 
+        RowBox[{"m", " "}]], "[", 
+       RowBox[{
+        UnderoverscriptBox["\[Sum]", 
+         RowBox[{"j", "=", "1"}], "m"], 
+        RowBox[{
+         FractionBox[
+          RowBox[{"\[PartialD]", "l"}], 
+          RowBox[{"\[PartialD]", 
+           SubscriptBox[
+            OverscriptBox["x", "^"], "j"]}]], 
+         SubscriptBox[
+          OverscriptBox["x", "^"], "j"]}]}], "]"}], "-", 
+      RowBox[{
+       FractionBox["1", "m"], "[", 
+       RowBox[{
+        UnderoverscriptBox["\[Sum]", 
+         RowBox[{"j", "=", "1"}], "m"], 
+        FractionBox[
+         RowBox[{"\[PartialD]", "l"}], 
+         RowBox[{"\[PartialD]", 
+          SubscriptBox[
+           OverscriptBox["x", "^"], "j"]}]]}], "]"}]}], ")"}]}], "+", 
+   RowBox[{
+    FractionBox[
+     RowBox[{"(", 
+      RowBox[{"-", "2"}], ")"}], "m"], "[", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"\[PartialD]", "l"}], 
+      RowBox[{"\[PartialD]", 
+       SubsuperscriptBox["\[Sigma]", "B", "2"]}]], "0"}], "]"}]}]}]], "Input",\
+
+ CellChangeTimes->{{3.790170344977854*^9, 
+  3.790170347251278*^9}},ExpressionUUID->"42c589c1-841a-492c-87d8-\
+d3f9f5a46063"],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox[
+   RowBox[{"\[PartialD]", "l"}], 
+   RowBox[{"\[PartialD]", 
+    SubscriptBox["x", "i"]}]], "=", 
+  RowBox[{
+   RowBox[{
+    FractionBox["1", 
+     SqrtBox[
+      RowBox[{
+       SubsuperscriptBox["\[Sigma]", "B", "2"], "+", "\[Epsilon]"}]]], 
+    RowBox[{"(", 
+     RowBox[{
+      FractionBox[
+       RowBox[{"\[PartialD]", "l"}], 
+       RowBox[{"\[PartialD]", 
+        SubscriptBox[
+         OverscriptBox["x", "^"], "i"]}]], "-", 
+      RowBox[{
+       FractionBox[
+        SubscriptBox[
+         OverscriptBox["x", "^"], "i"], 
+        RowBox[{"m", " "}]], "[", 
+       RowBox[{
+        UnderoverscriptBox["\[Sum]", 
+         RowBox[{"j", "=", "1"}], "m"], 
+        RowBox[{
+         FractionBox[
+          RowBox[{"\[PartialD]", "l"}], 
+          RowBox[{"\[PartialD]", 
+           SubscriptBox[
+            OverscriptBox["x", "^"], "j"]}]], 
+         SubscriptBox[
+          OverscriptBox["x", "^"], "j"]}]}], "]"}], "-", 
+      RowBox[{
+       FractionBox["1", "m"], "[", 
+       RowBox[{
+        UnderoverscriptBox["\[Sum]", 
+         RowBox[{"j", "=", "1"}], "m"], 
+        FractionBox[
+         RowBox[{"\[PartialD]", "l"}], 
+         RowBox[{"\[PartialD]", 
+          SubscriptBox[
+           OverscriptBox["x", "^"], "j"]}]]}], "]"}]}], ")"}]}], "+", 
+   RowBox[{
+    FractionBox[
+     RowBox[{"(", 
+      RowBox[{"-", "2"}], ")"}], "m"], "0"}]}]}]], "Input",
+ CellChangeTimes->{{3.790170356710281*^9, 
+  3.790170358116466*^9}},ExpressionUUID->"972bf884-9fc2-410c-aaeb-\
+4a946186db05"],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox[
+   RowBox[{"\[PartialD]", "l"}], 
+   RowBox[{"\[PartialD]", 
+    SubscriptBox["x", "i"]}]], "=", 
+  RowBox[{
+   RowBox[{
+    FractionBox["1", 
+     SqrtBox[
+      RowBox[{
+       SubsuperscriptBox["\[Sigma]", "B", "2"], "+", "\[Epsilon]"}]]], 
+    RowBox[{"(", 
+     RowBox[{
+      FractionBox[
+       RowBox[{"\[PartialD]", "l"}], 
+       RowBox[{"\[PartialD]", 
+        SubscriptBox[
+         OverscriptBox["x", "^"], "i"]}]], "-", 
+      RowBox[{
+       FractionBox[
+        SubscriptBox[
+         OverscriptBox["x", "^"], "i"], 
+        RowBox[{"m", " "}]], "[", 
+       RowBox[{
+        UnderoverscriptBox["\[Sum]", 
+         RowBox[{"j", "=", "1"}], "m"], 
+        RowBox[{
+         FractionBox[
+          RowBox[{"\[PartialD]", "l"}], 
+          RowBox[{"\[PartialD]", 
+           SubscriptBox[
+            OverscriptBox["x", "^"], "j"]}]], 
+         SubscriptBox[
+          OverscriptBox["x", "^"], "j"]}]}], "]"}], "-", 
+      RowBox[{
+       FractionBox["1", "m"], "[", 
+       RowBox[{
+        UnderoverscriptBox["\[Sum]", 
+         RowBox[{"j", "=", "1"}], "m"], 
+        FractionBox[
+         RowBox[{"\[PartialD]", "l"}], 
+         RowBox[{"\[PartialD]", 
+          SubscriptBox[
+           OverscriptBox["x", "^"], "j"]}]]}], "]"}]}], ")"}]}], "+", 
+   "0"}]}]], "Input",
+ CellChangeTimes->{
+  3.7901703671381903`*^9},ExpressionUUID->"4b11420b-0943-4b31-89af-\
+ee714b7ad066"],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox[
+   RowBox[{"\[PartialD]", "l"}], 
+   RowBox[{"\[PartialD]", 
+    SubscriptBox["x", "i"]}]], "=", 
+  RowBox[{
+   FractionBox["1", 
+    SqrtBox[
+     RowBox[{
+      SubsuperscriptBox["\[Sigma]", "B", "2"], "+", "\[Epsilon]"}]]], 
+   RowBox[{"(", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"\[PartialD]", "l"}], 
+      RowBox[{"\[PartialD]", 
+       SubscriptBox[
+        OverscriptBox["x", "^"], "i"]}]], "-", 
+     RowBox[{
+      FractionBox[
+       SubscriptBox[
+        OverscriptBox["x", "^"], "i"], 
+       RowBox[{"m", " "}]], "[", 
+      RowBox[{
+       UnderoverscriptBox["\[Sum]", 
+        RowBox[{"j", "=", "1"}], "m"], 
+       RowBox[{
+        FractionBox[
+         RowBox[{"\[PartialD]", "l"}], 
+         RowBox[{"\[PartialD]", 
+          SubscriptBox[
+           OverscriptBox["x", "^"], "j"]}]], 
+        SubscriptBox[
+         OverscriptBox["x", "^"], "j"]}]}], "]"}], "-", 
+     RowBox[{
+      FractionBox["1", "m"], "[", 
+      RowBox[{
+       UnderoverscriptBox["\[Sum]", 
+        RowBox[{"j", "=", "1"}], "m"], 
+       FractionBox[
+        RowBox[{"\[PartialD]", "l"}], 
+        RowBox[{"\[PartialD]", 
+         SubscriptBox[
+          OverscriptBox["x", "^"], "j"]}]]}], "]"}]}], ")"}]}]}]], "Input",
+ CellChangeTimes->{{3.790170373080492*^9, 
+  3.790170382460585*^9}},ExpressionUUID->"d16df045-cf53-4c64-a588-\
+ff1d88a953e1"],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox[
+   RowBox[{"\[PartialD]", "l"}], 
+   RowBox[{"\[PartialD]", 
+    SubscriptBox["x", "i"]}]], "=", 
+  RowBox[{
+   FractionBox["1", 
+    SqrtBox[
+     RowBox[{
+      SubsuperscriptBox["\[Sigma]", "B", "2"], "+", "\[Epsilon]"}]]], 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      FractionBox["m", "m"], 
+      FractionBox[
+       RowBox[{"\[PartialD]", "l"}], 
+       RowBox[{"\[PartialD]", 
+        SubscriptBox[
+         OverscriptBox["x", "^"], "i"]}]]}], "-", 
+     RowBox[{
+      FractionBox[
+       SubscriptBox[
+        OverscriptBox["x", "^"], "i"], 
+       RowBox[{"m", " "}]], "[", 
+      RowBox[{
+       UnderoverscriptBox["\[Sum]", 
+        RowBox[{"j", "=", "1"}], "m"], 
+       RowBox[{
+        FractionBox[
+         RowBox[{"\[PartialD]", "l"}], 
+         RowBox[{"\[PartialD]", 
+          SubscriptBox[
+           OverscriptBox["x", "^"], "j"]}]], 
+        SubscriptBox[
+         OverscriptBox["x", "^"], "j"]}]}], "]"}], "-", 
+     RowBox[{
+      FractionBox["1", "m"], "[", 
+      RowBox[{
+       UnderoverscriptBox["\[Sum]", 
+        RowBox[{"j", "=", "1"}], "m"], 
+       FractionBox[
+        RowBox[{"\[PartialD]", "l"}], 
+        RowBox[{"\[PartialD]", 
+         SubscriptBox[
+          OverscriptBox["x", "^"], "j"]}]]}], "]"}]}], ")"}]}]}]], "Input",
+ CellChangeTimes->{{3.790170391833651*^9, 
+  3.790170394011033*^9}},ExpressionUUID->"94abcc26-fc11-46c8-8a15-\
+72e953a9a40b"],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox[
+   RowBox[{"\[PartialD]", "l"}], 
+   RowBox[{"\[PartialD]", 
+    SubscriptBox["x", "i"]}]], "=", 
+  RowBox[{
+   FractionBox["1", 
+    RowBox[{"m", 
+     SqrtBox[
+      RowBox[{
+       SubsuperscriptBox["\[Sigma]", "B", "2"], "+", "\[Epsilon]"}]]}]], 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"m", 
+      FractionBox[
+       RowBox[{"\[PartialD]", "l"}], 
+       RowBox[{"\[PartialD]", 
+        SubscriptBox[
+         OverscriptBox["x", "^"], "i"]}]]}], "-", 
+     RowBox[{
+      SubscriptBox[
+       OverscriptBox["x", "^"], "i"], "[", 
+      RowBox[{
+       UnderoverscriptBox["\[Sum]", 
+        RowBox[{"j", "=", "1"}], "m"], 
+       RowBox[{
+        FractionBox[
+         RowBox[{"\[PartialD]", "l"}], 
+         RowBox[{"\[PartialD]", 
+          SubscriptBox[
+           OverscriptBox["x", "^"], "j"]}]], 
+        SubscriptBox[
+         OverscriptBox["x", "^"], "j"]}]}], "]"}], "-", 
+     RowBox[{"[", 
+      RowBox[{
+       UnderoverscriptBox["\[Sum]", 
+        RowBox[{"j", "=", "1"}], "m"], 
+       FractionBox[
+        RowBox[{"\[PartialD]", "l"}], 
+        RowBox[{"\[PartialD]", 
+         SubscriptBox[
+          OverscriptBox["x", "^"], "j"]}]]}], "]"}]}], ")"}]}]}]], "Input",
+ CellChangeTimes->{{3.7901704212505093`*^9, 
+  3.790170430574192*^9}},ExpressionUUID->"505c6f99-a5d1-49a4-bbfd-\
+1e39137e6236"],
+
+Cell[BoxData[
+ RowBox[{"\:041f\:043e\:0441\:043b\:0435\:0434\:043d\:0435\:0435", " ", 
+  "\:0432\:044b\:0440\:0430\:0436\:0435\:043d\:0438\:0435", " ", 
+  "\:044f\:0432\:043b\:044f\:0435\:0442\:0441\:044f", " ", 
+  "\:0443\:043f\:0440\:043e\:0449\:0435\:043d\:043d\:043e\:0439", " ", 
+  "\:0432\:0435\:0440\:0441\:0438\:0435\:0439", " ", 
+  "\:0432\:044b\:0447\:0438\:0441\:043b\:0435\:043d\:0438\:044f", " ", 
+  RowBox[{
+   FractionBox[
+    RowBox[{"\[PartialD]", "l"}], 
+    RowBox[{"\[PartialD]", 
+     SubscriptBox["x", "i"]}]], ".", "   "}]}]], "Input",
+ CellChangeTimes->{{3.790170462327285*^9, 3.790170495307625*^9}, {
+  3.7901706025041227`*^9, 
+  3.790170624616884*^9}},ExpressionUUID->"48e5f1b5-893b-4a89-9458-\
+21e062145013"],
+
+Cell[BoxData[
+ RowBox[{"\:041f\:043e\:043b\:0435\:0437\:043d\:044b\:0435", " ", 
+  RowBox[{
+  "\:043c\:0430\:0442\:0435\:0440\:0438\:0430\:043b\:044b", ":"}]}]], "Input",\
+
+ CellChangeTimes->{{3.79017085684727*^9, 
+  3.790170872540246*^9}},ExpressionUUID->"08f8fd44-88a3-462f-810e-\
+29097f0d7168"],
+
+Cell["\<\
+https://kevinzakka.github.io/2016/09/14/batch_normalization/
+http://cthorey.github.io./backpropagation/\
+\>", "ExternalLanguage",
+ CellChangeTimes->{
+  3.7901709001410923`*^9, {3.790171341196184*^9, 
+   3.790171342002898*^9}},ExpressionUUID->"80f10760-bb68-4408-a102-\
+e4ed7934b577"]
+},
+WindowSize->{952, 383},
+WindowMargins->{{Automatic, 1}, {1, Automatic}},
+PrintingCopies->1,
+PrintingPageRange->{1, Automatic},
+FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
+2018)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 928, 20, 52, "Input",ExpressionUUID->"25b63f4c-d9e6-43a0-bd6e-30658570acec"],
+Cell[1489, 42, 452, 14, 52, "Input",ExpressionUUID->"e83d986a-f772-4571-931f-d85f11c0b396"],
+Cell[1944, 58, 962, 31, 56, "Input",ExpressionUUID->"2fcae02a-511b-4912-97ac-8fc26ea965a6"],
+Cell[2909, 91, 1236, 41, 68, "Input",ExpressionUUID->"a7c56dbd-4de8-43be-8255-d1db8003e018"],
+Cell[4148, 134, 1213, 38, 60, "Input",ExpressionUUID->"b318a993-66ad-43a0-a0f9-d07b9ddf897c"],
+Cell[5364, 174, 543, 17, 56, "Input",ExpressionUUID->"cb6639e8-d4f4-48ce-9a6f-d007431e4e3f"],
+Cell[5910, 193, 447, 14, 56, "Input",ExpressionUUID->"c937bb05-7409-4498-a21a-20084e2fd446"],
+Cell[6360, 209, 208, 4, 73, "Input",ExpressionUUID->"7bc88766-56b7-4c70-8066-c8c99adae1af"],
+Cell[6571, 215, 726, 13, 30, "Input",ExpressionUUID->"02a4bcbc-fc2c-47b4-aa3f-91bffbfbed59"],
+Cell[7300, 230, 566, 17, 48, "Input",ExpressionUUID->"8931fb71-0aee-48b8-993b-1fd60035df1c"],
+Cell[7869, 249, 281, 8, 30, "Input",ExpressionUUID->"35f8e657-c642-4f93-9f4f-09b4a3431f01"],
+Cell[8153, 259, 383, 12, 52, "Input",ExpressionUUID->"60aba200-ef4d-4417-9db2-de537a005bce"],
+Cell[8539, 273, 147, 3, 52, "Input",ExpressionUUID->"7f87b320-d479-409a-b4bc-157aae95a1aa"],
+Cell[8689, 278, 820, 15, 51, "Input",ExpressionUUID->"0eb43d54-bf83-46bd-9d5a-ab7dbc3354d9"],
+Cell[9512, 295, 1459, 45, 61, "Input",ExpressionUUID->"7a28e3d3-8b3a-4b20-9ffa-1517bb93f95e"],
+Cell[10974, 342, 1768, 57, 62, "Input",ExpressionUUID->"e6b7b5dd-e314-4883-9e5a-b75551aa0832"],
+Cell[12745, 401, 1742, 55, 68, "Input",ExpressionUUID->"7a960697-3fd4-4eb0-86eb-3dc04e6169f0"],
+Cell[14490, 458, 1783, 58, 69, "Input",ExpressionUUID->"c3c4f958-a994-469b-bfc0-785adf998d6b"],
+Cell[16276, 518, 1576, 51, 68, "Input",ExpressionUUID->"0eb25d3f-c3a4-4e3a-82fc-d09ee15fda2b"],
+Cell[17855, 571, 1819, 56, 62, "Input",ExpressionUUID->"247482f0-36d1-41d6-9ea5-9b3c77230729"],
+Cell[19677, 629, 2501, 80, 68, "Input",ExpressionUUID->"b13b97af-7f0f-4fcf-a185-cbea64d14d93"],
+Cell[22181, 711, 2148, 71, 62, "Input",ExpressionUUID->"e19b7373-bb64-4245-a431-47903c55f200"],
+Cell[24332, 784, 2218, 71, 65, "Input",ExpressionUUID->"49cd4694-dab8-4cac-acc7-ef58403cc9e6"],
+Cell[26553, 857, 1936, 64, 65, "Input",ExpressionUUID->"afc502df-6085-4336-b965-384a52811cfb"],
+Cell[28492, 923, 1938, 64, 65, "Input",ExpressionUUID->"914b09c4-8d0e-41dc-ac5b-d69c3afdd041"],
+Cell[30433, 989, 2115, 69, 65, "Input",ExpressionUUID->"a8d008eb-5f76-4282-9b1f-2a387b9bde97"],
+Cell[32551, 1060, 1990, 66, 65, "Input",ExpressionUUID->"91784b3d-5558-4561-b185-e89df5707f2e"],
+Cell[34544, 1128, 1916, 64, 65, "Input",ExpressionUUID->"1296db08-8edf-4886-9f79-bf2c3eef5466"],
+Cell[36463, 1194, 1787, 59, 65, "Input",ExpressionUUID->"24030b65-a274-4db5-a480-72ea8091161d"],
+Cell[38253, 1255, 1701, 57, 65, "Input",ExpressionUUID->"42c589c1-841a-492c-87d8-d3f9f5a46063"],
+Cell[39957, 1314, 1537, 51, 65, "Input",ExpressionUUID->"972bf884-9fc2-410c-aaeb-4a946186db05"],
+Cell[41497, 1367, 1429, 48, 65, "Input",ExpressionUUID->"4b11420b-0943-4b31-89af-ee714b7ad066"],
+Cell[42929, 1417, 1386, 46, 65, "Input",ExpressionUUID->"d16df045-cf53-4c64-a588-ff1d88a953e1"],
+Cell[44318, 1465, 1437, 48, 65, "Input",ExpressionUUID->"94abcc26-fc11-46c8-8a15-72e953a9a40b"],
+Cell[45758, 1515, 1357, 45, 65, "Input",ExpressionUUID->"505c6f99-a5d1-49a4-bbfd-1e39137e6236"],
+Cell[47118, 1562, 735, 15, 51, "Input",ExpressionUUID->"48e5f1b5-893b-4a89-9458-21e062145013"],
+Cell[47856, 1579, 297, 7, 30, "Input",ExpressionUUID->"08f8fd44-88a3-462f-810e-29097f0d7168"],
+Cell[48156, 1588, 293, 7, 67, "ExternalLanguage",ExpressionUUID->"80f10760-bb68-4408-a102-e4ed7934b577"]
+}
+]
+*)
+
